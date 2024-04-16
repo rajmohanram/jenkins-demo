@@ -26,10 +26,8 @@ pipeline {
         stage('Use Environment Variables') {
             steps {
                 sh 'env'
-                withEnv(env) {
-                    sh 'echo "My name is $NAME, my age is $AGE, and my occupation is $OCCUPATION"'
-                    // Add other steps that use the environment variables here
-                }
+                sh 'echo "My name is $NAME, my age is $AGE, and my occupation is $OCCUPATION"'
+                // Add other steps that use the environment variables here
             }
         }
     }
